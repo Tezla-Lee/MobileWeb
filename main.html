@@ -2,26 +2,26 @@
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
-    <title>모바일 웹 UI</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="./images/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/animation.css" />
-  </head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <title>Mobile Web</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
+    <script src="./js/helper.js" defer></script>
+    <script src="./js/index.js" defer></script>
+  </head>
   <body>
-    <!-- 헤더 시작 -->
-    <div class="app-header" role="banner">
+    <header class="app-header">
       <h1 class="brand">
         <a href="https://www.ediya.com/" target="_blank">
           <img
-            class="respons"
             src="./images/multicampus.svg"
             alt="multi campus"
+            class="response"
           />
         </a>
       </h1>
@@ -33,10 +33,10 @@
       >
         <span class="ir"></span>
       </button>
-      <nav hidden class="app-navigation">
+      <nav class="app-navigation">
         <h2 class="a11y-hidden">메인 메뉴</h2>
         <ul class="reset-list">
-          <li><a href="#">메뉴</a></li>
+          <li><a href="#">이디야 음료 메뉴</a></li>
           <li><a href="#">이디야멤버스</a></li>
           <li><a href="#">이디야커피랩</a></li>
           <li><a href="#">이디야컬쳐랩</a></li>
@@ -49,12 +49,12 @@
           title="메뉴 닫기"
           aria-label="메뉴 닫기"
         >
+          <!--aria-hidden을 통해 보이스 오버 등에서 숨겨지게 된다-->
           <span class="close" aria-hidden="true">×</span>
         </button>
       </nav>
-    </div>
-    <!-- 메인 콘텐츠 시작 -->
-    <div class="app-main" rloe="main">
+    </header>
+    <main class="app-main">
       <h2 class="a11y-hidden">이디야 음료</h2>
       <p hidden>음료의 배경 색상이 하늘색인 경우 여름 한정 메뉴 입니다.</p>
       <ul class="ediya-menu reset-list">
@@ -477,9 +477,8 @@
           </div>
         </li>
       </ul>
-    </div>
-    <!-- 푸터 시작 -->
-    <div class="a11y-hidden app-footer" role="contentinfo">
+    </main>
+    <footer class="app-footer a11y-hidden">
       <address>
         <span
           >서울특별시 강남구 논현로 636 이디야 빌딩(서울특별시 강남구 논현동
@@ -490,8 +489,6 @@
       <small class="copyright"
         >&copy; 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED.</small
       >
-    </div>
-    <script src="./js/helper.js"></script>
-    <script src="./js/index.js"></script>
+    </footer>
   </body>
 </html>
